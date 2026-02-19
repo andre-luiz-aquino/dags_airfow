@@ -11,8 +11,8 @@ with DAG(
 ) as dag:
 
     run_container = KubernetesPodOperator(
-        task_id="run_dockerhub_image",
-        name="run-dockerhub-image",
+        task_id="oi",
+        name="age",
         namespace="airflow",
         image="seuusuario/sua-imagem:latest",
         image_pull_policy="Always",
