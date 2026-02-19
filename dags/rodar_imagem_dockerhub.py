@@ -25,7 +25,7 @@ with DAG(
         task_id="executar_imagem_dockerhub",
         name="executar-imagem-dockerhub",
         namespace="airflow",  # ajuste se seu namespace for outro
-        image="andreaquino/ingestao_de_dados:tagname",  # <-- coloque aqui sua imagem
+        image="andreaquino/ingestao_de_dados:latest",  # <-- coloque aqui sua imagem
         image_pull_policy="Always",
         get_logs=True,
         is_delete_operator_pod=True,  # remove o pod após terminar
