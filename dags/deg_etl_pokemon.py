@@ -12,7 +12,7 @@ default_args = {
 }
 
 with DAG(
-    dag_id="rodar_imagem_dockerhub",
+    dag_id="rodar_imagem_dockerhub_pokemon",
     description="DAG que executa um container com imagem do Docker Hub",
     start_date=datetime(2024, 1, 1),
     schedule=None,  # ou por ex. '0 9 * * *' para rodar todo dia às 09h
