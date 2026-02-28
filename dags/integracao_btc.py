@@ -14,7 +14,7 @@ default_args = {
 }
 
 with DAG(
-    dag_id="rodar_imagem_dockerhub",
+    dag_id="integracao_btc",
     description="DAG que executa um container com imagem do Docker Hub",
     start_date=datetime(2024, 1, 1),
     schedule_interval="*/5 * * * *",  # roda a cada 5 minutos
@@ -29,8 +29,8 @@ with DAG(
     db_dsn = Variable.get("DB_DSN")
 
     executar_container = KubernetesPodOperator(
-        task_id="executar_imagem_dockerhub",
-        name="executar-imagem-dockerhub",
+        task_id="executar_integracao_btc",
+        name="executar-integracao-btc",
         namespace="airflow",  # ajuste se seu namespace for outro
         image="andreaquino/integracao_btc:latest",  # imagem correta
         image_pull_policy="Always",
